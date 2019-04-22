@@ -4,12 +4,20 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab2Page } from './tab2.page';
+import { PipesModule } from '../pipes/pipes.module';
+import { DetailComponent } from '../components/detail/detail.component';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
+  entryComponents: [
+    DetailComponent
+  ],
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
+    PipesModule,
+    ComponentsModule,
     RouterModule.forChild([{ path: '', component: Tab2Page }])
   ],
   declarations: [Tab2Page]
